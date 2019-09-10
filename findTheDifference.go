@@ -2,18 +2,18 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	fmt.Println(findTheDifference("abcd", "abcde"))
 }
 
-func findTheDifference(s string, t string) byte{
+func findTheDifference(s string, t string) byte {
 	var result uint8
 
-	for _,v := range []rune(s)  {
+	for _, v := range []rune(s) {
 		result -= uint8(v)
 	}
 
-	for _,v := range []rune(t)  {
+	for _, v := range []rune(t) {
 		result += uint8(v)
 	}
 
